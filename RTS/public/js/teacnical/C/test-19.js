@@ -245,6 +245,7 @@ const questions = [
     "num": 23,
     "question_en": "What is 'kill_dependency' macro?",
     "question_hi": "'kill_dependency' macro क्या होता है?",
+    "options_en": ["Breaks dependency chain for optimization", "Creates dependency", "Sets memory order", "No macro"],
     "options_hi": ["dependency chain break करने के लिए", "dependency create करता है", "memory order set करता है", "कोई macro नहीं"],
     "answer_en": "Breaks dependency chain for optimization",
     "answer_hi": "dependency chain break करने के लिए",
@@ -330,17 +331,6 @@ const questions = [
   },
   {
     "num": 31,
-    "question_en": "What is 'noinline and always_inline together'?",
-    "question_hi": "'noinline और always_inline together' क्या होता है?",
-    "options_en": ["Contradictory, compiler error", "Noinline wins", "Always_inline wins", "Implementation defined"],
-    "options_hi": ["contradictory, compiler error", "noinline wins", "always_inline wins", "implementation defined"],
-    "answer_en": "Contradictory, compiler error",
-    "answer_hi": "contradictory, compiler error",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 32,
     "question_en": "What is 'pure vs const attribute difference'?",
     "question_hi": "'pure और const attribute में difference' क्या होता है?",
     "options_en": ["Pure: no side effects, may read globals; Const: only parameters", "Same", "Opposite", "No difference"],
@@ -351,51 +341,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 33,
-    "question_en": "What is 'returns_twice function example'?",
-    "question_hi": "'returns_twice function का example' क्या होता है?",
-    "options_en": ["setjmp(), vfork()", "malloc(), free()", "printf(), scanf()", "No such functions"],
-    "options_hi": ["setjmp(), vfork()", "malloc(), free()", "printf(), scanf()", "ऐसे कोई functions नहीं"],
-    "answer_en": "setjmp(), vfork()",
-    "answer_hi": "setjmp(), vfork()",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 34,
-    "question_en": "What is 'sentinel at position'?",
-    "question_hi": "'position पर sentinel' क्या होता है?",
-    "options_en": ["__attribute__((sentinel(1))) for position", "Always at end", "No position", "Invalid"],
-    "options_hi": ["position के लिए __attribute__((sentinel(1)))", "हमेशा end पर", "कोई position नहीं", "invalid"],
-    "answer_en": "__attribute__((sentinel(1))) for position",
-    "answer_hi": "position के लिए __attribute__((sentinel(1)))",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 31,
-    "question_en": "What is 'noinline and always_inline together'?",
-    "question_hi": "'noinline और always_inline together' क्या होता है?",
-    "options_en": ["Contradictory, compiler error", "Noinline wins", "Always_inline wins", "Implementation defined"],
-    "options_hi": ["contradictory, compiler error", "noinline wins", "always_inline wins", "implementation defined"],
-    "answer_en": "Contradictory, compiler error",
-    "answer_hi": "contradictory, compiler error",
-    "attempted": false,
-    "selected": ""
-  },
-  {
     "num": 32,
-    "question_en": "What is 'pure vs const attribute difference'?",
-    "question_hi": "'pure और const attribute में difference' क्या होता है?",
-    "options_en": ["Pure: no side effects, may read globals; Const: only parameters", "Same", "Opposite", "No difference"],
-    "options_hi": ["Pure: कोई side effects नहीं, globals read कर सकती है; Const: केवल parameters", "समान", "विपरीत", "कोई difference नहीं"],
-    "answer_en": "Pure: no side effects, may read globals; Const: only parameters",
-    "answer_hi": "Pure: कोई side effects नहीं, globals read कर सकती है; Const: केवल parameters",
-    "attempted": false,
-    "selected": ""
-  },
-  {
-    "num": 33,
     "question_en": "What is 'returns_twice function example'?",
     "question_hi": "'returns_twice function का example' क्या होता है?",
     "options_en": ["setjmp(), vfork()", "malloc(), free()", "printf(), scanf()", "No such functions"],
@@ -406,7 +352,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 34,
+    "num": 33,
     "question_en": "What is 'sentinel at position'?",
     "question_hi": "'position पर sentinel' क्या होता है?",
     "options_en": ["__attribute__((sentinel(1))) for position", "Always at end", "No position", "Invalid"],
@@ -417,7 +363,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 35,
+    "num": 34,
     "question_en": "What is 'deprecated since version'?",
     "question_hi": "'version से deprecated' क्या होता है?",
     "options_en": ["__attribute__((deprecated(\"since version 2.0\")))", "No version", "Only version", "Invalid"],
@@ -428,7 +374,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 36,
+    "num": 35,
     "question_en": "What is 'unused on parameter'?",
     "question_hi": "'parameter पर unused' क्या होता है?",
     "options_en": ["void func(int x __attribute__((unused)))", "Not allowed", "Only on variables", "Invalid"],
@@ -439,7 +385,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 37,
+    "num": 36,
     "question_en": "What is 'used on static function'?",
     "question_hi": "'static function पर used' क्या होता है?",
     "options_en": ["static void func() __attribute__((used))", "Not needed", "Only extern", "Invalid"],
@@ -450,7 +396,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 38,
+    "num": 37,
     "question_en": "What is 'aligned on typedef'?",
     "question_hi": "'typedef पर aligned' क्या होता है?",
     "options_en": ["typedef int aligned_int __attribute__((aligned(16)))", "Not allowed", "Only on variables", "Invalid"],
@@ -461,7 +407,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 39,
+    "num": 38,
     "question_en": "What is 'packed on enum'?",
     "question_hi": "'enum पर packed' क्या होता है?",
     "options_en": ["enum __attribute__((packed)) small {A,B}", "Not needed", "Only struct", "Invalid"],
@@ -472,7 +418,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 40,
+    "num": 39,
     "question_en": "What is 'transparent_union parameter passing'?",
     "question_hi": "'transparent_union parameter passing' क्या होता है?",
     "options_en": ["Pass any union member type transparently", "Only first member", "Not transparent", "Invalid"],
@@ -483,7 +429,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 41,
+    "num": 40,
     "question_en": "What is 'mode attribute types'?",
     "question_hi": "'mode attribute types' क्या होते हैं?",
     "options_en": ["QI (8-bit), HI (16-bit), SI (32-bit), DI (64-bit)", "Only byte", "No modes", "Invalid"],
@@ -494,7 +440,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 42,
+    "num": 41,
     "question_en": "What is 'vector_size with operations'?",
     "question_hi": "'operations के साथ vector_size' क्या होता है?",
     "options_en": ["Supports +, -, *, / on vector types", "No operations", "Only load/store", "Invalid"],
@@ -505,7 +451,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 43,
+    "num": 42,
     "question_en": "What is 'no_sanitize_thread'?",
     "question_hi": "'no_sanitize_thread' क्या होता है?",
     "options_en": ["__attribute__((no_sanitize_thread))", "Not a sanitizer", "For memory only", "Invalid"],
@@ -516,7 +462,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 44,
+    "num": 43,
     "question_en": "What is 'no_sanitize(\"address\")'?",
     "question_hi": "'no_sanitize(\"address\")' क्या होता है?",
     "options_en": ["__attribute__((no_sanitize(\"address\")))", "Only no_sanitize_address", "Same", "Invalid"],
@@ -527,7 +473,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 45,
+    "num": 44,
     "question_en": "What is 'assume_aligned with offset'?",
     "question_hi": "'offset के साथ assume_aligned' क्या होता है?",
     "options_en": ["__attribute__((assume_aligned(16, 4)))", "No offset", "Only alignment", "Invalid"],
@@ -538,7 +484,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 46,
+    "num": 45,
     "question_en": "What is 'alloc_size attribute'?",
     "question_hi": "'alloc_size attribute' क्या होता है?",
     "options_en": ["__attribute__((alloc_size(1,2))) for malloc-like functions", "Not for allocation", "Only size", "Invalid"],
@@ -549,7 +495,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 47,
+    "num": 46,
     "question_en": "What is 'warn_if_not_aligned attribute'?",
     "question_hi": "'warn_if_not_aligned attribute' क्या होता है?",
     "options_en": ["GCC: warn if pointer not sufficiently aligned", "No warning", "Error", "Invalid"],
@@ -560,7 +506,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 48,
+    "num": 47,
     "question_en": "What is 'target_clones attribute'?",
     "question_hi": "'target_clones attribute' क्या होता है?",
     "options_en": ["__attribute__((target_clones(\"default,avx2,avx512f\")))", "Single target", "No clones", "Invalid"],
@@ -571,7 +517,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 49,
+    "num": 48,
     "question_en": "What is 'symver attribute'?",
     "question_hi": "'symver attribute' क्या होता है?",
     "options_en": ["__attribute__((symver(\"foo@VERS_1\"))) symbol versioning", "No versioning", "Only for shared libs", "Invalid"],
@@ -582,7 +528,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 50,
+    "num": 49,
     "question_en": "What is 'tls_model attribute'?",
     "question_hi": "'tls_model attribute' क्या होता है?",
     "options_en": ["__attribute__((tls_model(\"initial-exec\"))) TLS model", "No TLS", "Only global-dynamic", "Invalid"],
@@ -593,7 +539,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 51,
+    "num": 50,
     "question_en": "What is 'selectany attribute'?",
     "question_hi": "'selectany attribute' क्या होता है?",
     "options_en": ["MSVC/GCC: __attribute__((selectany)) pick any duplicate", "No duplicates", "Error on duplicate", "Invalid"],
@@ -604,7 +550,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 52,
+    "num": 51,
     "question_en": "What is 'dllimport attribute'?",
     "question_hi": "'dllimport attribute' क्या होता है?",
     "options_en": ["__attribute__((dllimport)) for Windows DLL import", "Not for Windows", "Only export", "Invalid"],
@@ -615,7 +561,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 53,
+    "num": 52,
     "question_en": "What is 'dllexport attribute'?",
     "question_hi": "'dllexport attribute' क्या होता है?",
     "options_en": ["__attribute__((dllexport)) for Windows DLL export", "Not for Windows", "Only import", "Invalid"],
@@ -626,7 +572,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 54,
+    "num": 53,
     "question_en": "What is 'interrupt attribute'?",
     "question_hi": "'interrupt attribute' क्या होता है?",
     "options_en": ["__attribute__((interrupt)) for interrupt handler functions", "Not for interrupts", "Only main", "Invalid"],
@@ -637,7 +583,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 55,
+    "num": 54,
     "question_en": "What is 'naked attribute'?",
     "question_hi": "'naked attribute' क्या होता है?",
     "options_en": ["__attribute__((naked)) no prologue/epilogue", "With prologue", "Only epilogue", "Invalid"],
@@ -648,7 +594,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 56,
+    "num": 55,
     "question_en": "What is 'aligned and packed together'?",
     "question_hi": "'aligned और packed together' क्या होता है?",
     "options_en": ["__attribute__((packed, aligned(4)))", "Contradictory", "Only one", "Invalid"],
@@ -659,7 +605,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 57,
+    "num": 56,
     "question_en": "What is 'vector_type attribute'?",
     "question_hi": "'vector_type attribute' क्या होता है?",
     "options_en": ["Clang: __attribute__((vector_type(4)))", "Only GCC", "No vector_type", "Invalid"],
@@ -670,7 +616,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 58,
+    "num": 57,
     "question_en": "What is 'ext_vector_type attribute'?",
     "question_hi": "'ext_vector_type attribute' क्या होता है?",
     "options_en": ["Clang: __attribute__((ext_vector_type(3))) for 3-element vector", "Only GCC", "No ext_vector", "Invalid"],
@@ -681,7 +627,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 59,
+    "num": 58,
     "question_en": "What is 'neon_vector_type attribute'?",
     "question_hi": "'neon_vector_type attribute' क्या होता है?",
     "options_en": ["ARM: __attribute__((neon_vector_type))", "Only x86", "No neon", "Invalid"],
@@ -692,7 +638,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 60,
+    "num": 59,
     "question_en": "What is 'warn_unused variable attribute'?",
     "question_hi": "'warn_unused variable attribute' क्या होता है?",
     "options_en": ["int x __attribute__((warn_unused))", "Only functions", "No warn_unused", "Invalid"],
@@ -703,7 +649,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 61,
+    "num": 60,
     "question_en": "What is 'cleanup with non-auto variable'?",
     "question_hi": "'non-auto variable के साथ cleanup' क्या होता है?",
     "options_en": ["Only works with auto variables", "Works with static", "Works with global", "Any variable"],
@@ -714,7 +660,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 62,
+    "num": 61,
     "question_en": "What is 'section on variable and function'?",
     "question_hi": "'variable और function पर section' क्या होता है?",
     "options_en": ["Both can have section attribute", "Only function", "Only variable", "Neither"],
@@ -725,7 +671,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 63,
+    "num": 62,
     "question_en": "What is 'alias to weak symbol'?",
     "question_hi": "'weak symbol का alias' क्या होता है?",
     "options_en": ["Weak alias __attribute__((weak, alias(\"target\")))", "Strong alias", "No weak alias", "Invalid"],
@@ -736,7 +682,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 64,
+    "num": 63,
     "question_en": "What is 'constructor with priority'?",
     "question_hi": "'priority के साथ constructor' क्या होता है?",
     "options_en": ["__attribute__((constructor(101))) priority 101", "No priority", "Only destructor", "Invalid"],
@@ -747,7 +693,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 65,
+    "num": 64,
     "question_en": "What is 'destructor with priority'?",
     "question_hi": "'priority के साथ destructor' क्या होता है?",
     "options_en": ["__attribute__((destructor(101))) priority 101", "No priority", "Only constructor", "Invalid"],
@@ -758,7 +704,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 66,
+    "num": 65,
     "question_en": "What is 'visibility on class' in C++ mode?",
     "question_hi": "C++ mode में 'class पर visibility' क्या होता है?",
     "options_en": ["Applies to all class members", "Only class itself", "Not for C++", "Invalid"],
@@ -769,7 +715,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 67,
+    "num": 66,
     "question_en": "What is 'target specific optimization'?",
     "question_hi": "'target specific optimization' क्या होती है?",
     "options_en": ["__attribute__((target(\"arch=core-avx2\")))", "Generic optimization", "No target", "Invalid"],
@@ -780,7 +726,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 68,
+    "num": 67,
     "question_en": "What is 'optimize with multiple options'?",
     "question_hi": "'multiple options के साथ optimize' क्या होता है?",
     "options_en": ["__attribute__((optimize(\"O3\",\"unroll-loops\")))", "Single option", "No options", "Invalid"],
@@ -791,7 +737,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 69,
+    "num": 68,
     "question_en": "What is 'flatten on recursive function'?",
     "question_hi": "'recursive function पर flatten' क्या होता है?",
     "options_en": ["May cause infinite inlining", "No effect", "Prevents recursion", "Invalid"],
@@ -802,7 +748,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 70,
+    "num": 69,
     "question_en": "What is 'noinline on small function'?",
     "question_hi": "'small function पर noinline' क्या होता है?",
     "options_en": ["Prevents inlining even if small", "Forces inlining", "No effect", "Invalid"],
@@ -813,7 +759,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 71,
+    "num": 70,
     "question_en": "What is 'always_inline on large function'?",
     "question_hi": "'large function पर always_inline' क्या होता है?",
     "options_en": ["Compiler may ignore if too large", "Always inlines", "Error", "Invalid"],
@@ -824,7 +770,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 72,
+    "num": 71,
     "question_en": "What is 'pure function with I/O'?",
     "question_hi": "'I/O के साथ pure function' क्या होता है?",
     "options_en": ["Invalid: pure cannot have I/O", "Allowed", "Only reading", "Invalid"],
@@ -835,7 +781,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 73,
+    "num": 72,
     "question_en": "What is 'const function with global read'?",
     "question_hi": "'global read के साथ const function' क्या होता है?",
     "options_en": ["Invalid: const cannot read globals", "Allowed", "Only write", "Invalid"],
@@ -846,7 +792,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 74,
+    "num": 73,
     "question_en": "What is 'noreturn function with return statement'?",
     "question_hi": "'return statement के साथ noreturn function' क्या होता है?",
     "options_en": ["Compiler warning/error", "Allowed", "Only void return", "Invalid"],
@@ -857,7 +803,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 75,
+    "num": 74,
     "question_en": "What is 'returns_twice with longjmp'?",
     "question_hi": "'longjmp के साथ returns_twice' क्या होता है?",
     "options_en": ["setjmp returns twice, longjmp doesn't", "Both return twice", "Neither", "Invalid"],
@@ -868,7 +814,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 76,
+    "num": 75,
     "question_en": "What is 'sentinel with zero position'?",
     "question_hi": "'zero position के साथ sentinel' क्या होता है?",
     "options_en": ["__attribute__((sentinel(0))) same as default", "Invalid position", "No sentinel", "Invalid"],
@@ -879,7 +825,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 77,
+    "num": 76,
     "question_en": "What is 'deprecated macro'?",
     "question_hi": "'deprecated macro' क्या होता है?",
     "options_en": ["#define OLD_FUNC() __attribute__((deprecated)) old_func()", "No macro", "Only function", "Invalid"],
@@ -890,7 +836,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 78,
+    "num": 77,
     "question_en": "What is 'unused on struct member'?",
     "question_hi": "'struct member पर unused' क्या होता है?",
     "options_en": ["struct S {int x __attribute__((unused));};", "Not allowed", "Only variables", "Invalid"],
@@ -901,7 +847,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 79,
+    "num": 78,
     "question_en": "What is 'used on inline function'?",
     "question_hi": "'inline function पर used' क्या होता है?",
     "options_en": ["inline void f() __attribute__((used))", "Not needed", "Only extern", "Invalid"],
@@ -912,7 +858,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 80,
+    "num": 79,
     "question_en": "What is 'aligned on array'?",
     "question_hi": "'array पर aligned' क्या होता है?",
     "options_en": ["int arr[4] __attribute__((aligned(16)));", "Not allowed", "Only elements", "Invalid"],
@@ -923,7 +869,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 81,
+    "num": 80,
     "question_en": "What is 'packed on bit-field struct'?",
     "question_hi": "'bit-field struct पर packed' क्या होता है?",
     "options_en": ["struct __attribute__((packed)) {int a:4; int b:4;};", "Not needed", "Only regular", "Invalid"],
@@ -934,7 +880,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 82,
+    "num": 81,
     "question_en": "What is 'transparent_union with different sizes'?",
     "question_hi": "'different sizes के साथ transparent_union' क्या होता है?",
     "options_en": ["Members can have different sizes", "Must be same", "Only pointers", "Invalid"],
@@ -945,7 +891,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 83,
+    "num": 82,
     "question_en": "What is 'mode on float type'?",
     "question_hi": "'float type पर mode' क्या होता है?",
     "options_en": ["__attribute__((mode(SF))) single float", "Only integers", "No float mode", "Invalid"],
@@ -956,7 +902,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 84,
+    "num": 83,
     "question_en": "What is 'vector_size not power of 2'?",
     "question_hi": "'power of 2 नहीं, ऐसे vector_size' क्या होता है?",
     "options_en": ["__attribute__((vector_size(12))) may not work", "Works fine", "Error", "Invalid"],
@@ -967,7 +913,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 85,
+    "num": 84,
     "question_en": "What is 'no_sanitize_all'?",
     "question_hi": "'no_sanitize_all' क्या होता है?",
     "options_en": ["__attribute__((no_sanitize_all)) disables all sanitizers", "Not exists", "Only some", "Invalid"],
@@ -978,7 +924,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 86,
+    "num": 85,
     "question_en": "What is 'assume_aligned on return type'?",
     "question_hi": "'return type पर assume_aligned' क्या होता है?",
     "options_en": ["int* f() __attribute__((assume_aligned(16)));", "Not allowed", "Only parameters", "Invalid"],
@@ -989,7 +935,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 87,
+    "num": 86,
     "question_en": "What is 'alloc_size on realloc-like'?",
     "question_hi": "'realloc-like पर alloc_size' क्या होता है?",
     "options_en": ["__attribute__((alloc_size(2))) for realloc", "Only malloc", "No realloc", "Invalid"],
@@ -1000,7 +946,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 88,
+    "num": 87,
     "question_en": "What is 'warn_if_not_aligned level'?",
     "question_hi": "'warn_if_not_aligned level' क्या होता है?",
     "options_en": ["__attribute__((warn_if_not_aligned(16)))", "No level", "Only check", "Invalid"],
@@ -1011,7 +957,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 89,
+    "num": 88,
     "question_en": "What is 'target_clones with default'?",
     "question_hi": "'default के साथ target_clones' क्या होता है?",
     "options_en": ["__attribute__((target_clones(\"default,avx2\")))", "Without default", "Only avx2", "Invalid"],
@@ -1022,7 +968,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 90,
+    "num": 89,
     "question_en": "What is 'symver with version range'?",
     "question_hi": "'version range के साथ symver' क्या होता है?",
     "options_en": ["__attribute__((symver(\"foo@@VERS_2\"))) default version", "No range", "Only @", "Invalid"],
@@ -1033,7 +979,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 91,
+    "num": 90,
     "question_en": "What is 'tls_model local-exec'?",
     "question_hi": "'tls_model local-exec' क्या होता है?",
     "options_en": ["__attribute__((tls_model(\"local-exec\")))", "Only initial-exec", "No local", "Invalid"],
@@ -1044,7 +990,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 92,
+    "num": 91,
     "question_en": "What is 'selectany on const variable'?",
     "question_hi": "'const variable पर selectany' क्या होता है?",
     "options_en": ["const int x __attribute__((selectany)) = 5;", "Not allowed", "Only non-const", "Invalid"],
@@ -1055,7 +1001,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 93,
+    "num": 92,
     "question_en": "What is 'dllimport on static function'?",
     "question_hi": "'static function पर dllimport' क्या होता है?",
     "options_en": ["Invalid: static cannot be dllimport", "Allowed", "Only extern", "Invalid"],
@@ -1066,7 +1012,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 94,
+    "num": 93,
     "question_en": "What is 'dllexport on inline function'?",
     "question_hi": "'inline function पर dllexport' क्या होता है?",
     "options_en": ["inline __attribute__((dllexport)) void f() {}", "Not allowed", "Only extern", "Invalid"],
@@ -1077,7 +1023,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 95,
+    "num": 94,
     "question_en": "What is 'interrupt handler prologue'?",
     "question_hi": "'interrupt handler prologue' क्या होता है?",
     "options_en": ["Compiler generates register save/restore", "No prologue", "Manual only", "Invalid"],
@@ -1088,7 +1034,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 96,
+    "num": 95,
     "question_en": "What is 'naked function restrictions'?",
     "question_hi": "'naked function restrictions' क्या होती हैं?",
     "options_en": ["Cannot have return statement", "Can have return", "No restrictions", "Invalid"],
@@ -1099,7 +1045,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 97,
+    "num": 96,
     "question_en": "What is 'vector_type with operators'?",
     "question_hi": "'operators के साथ vector_type' क्या होता है?",
     "options_en": ["Supports arithmetic operators", "No operators", "Only assignment", "Invalid"],
@@ -1110,7 +1056,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 98,
+    "num": 97,
     "question_en": "What is 'ext_vector_type swizzle'?",
     "question_hi": "'ext_vector_type swizzle' क्या होता है?",
     "options_en": ["vector.xy, vector.xyz etc. for element access", "No swizzle", "Only []", "Invalid"],
@@ -1121,7 +1067,7 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 99,
+    "num": 98,
     "question_en": "What is 'neon_vector_type for ARM'?",
     "question_hi": "ARM के लिए 'neon_vector_type' क्या होता है?",
     "options_en": ["ARM NEON SIMD vector types", "Not for ARM", "Only x86", "Invalid"],
@@ -1132,13 +1078,24 @@ const questions = [
     "selected": ""
   },
   {
-    "num": 100,
+    "num": 99,
     "question_en": "What is 'warn_unused on typedef'?",
     "question_hi": "'typedef पर warn_unused' क्या होता है?",
     "options_en": ["typedef int __attribute__((warn_unused)) unused_int;", "Not allowed", "Only variables", "Invalid"],
     "options_hi": ["typedef int __attribute__((warn_unused)) unused_int;", "allowed नहीं", "केवल variables", "invalid"],
     "answer_en": "typedef int __attribute__((warn_unused)) unused_int;",
     "answer_hi": "typedef int __attribute__((warn_unused)) unused_int;",
+    "attempted": false,
+    "selected": ""
+  },
+  {
+    "num": 100,
+    "question_en": "What is 'cleanup attribute working only with auto variables'?",
+    "question_hi": "'cleanup attribute केवल auto variables के साथ काम करता है' क्या होता है?",
+    "options_en": ["Yes, cleanup works only with automatic (local) variables", "Works with all variables", "Works only with static", "Invalid statement"],
+    "options_hi": ["हाँ, cleanup केवल automatic (local) variables के साथ काम करता है", "सभी variables के साथ काम करता है", "केवल static के साथ काम करता है", "invalid statement"],
+    "answer_en": "Yes, cleanup works only with automatic (local) variables",
+    "answer_hi": "हाँ, cleanup केवल automatic (local) variables के साथ काम करता है",
     "attempted": false,
     "selected": ""
   }

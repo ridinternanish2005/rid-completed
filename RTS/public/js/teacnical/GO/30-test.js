@@ -1,4 +1,4 @@
-[
+const questions=[
     {
         "num": 1,
         "question_en": "How do you declare a generic function in Go?",
